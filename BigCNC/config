@@ -138,6 +138,7 @@ gamma_slow_homing_rate_mm_s                  2                # "
 alpha_homing_retract_mm                      5                # distance in mm
 beta_homing_retract_mm                       5                # "
 gamma_homing_retract_mm                      1                # "
+#homing_order                                ZXY               #Homing order start with Z then X then Y
 
 # Pause button
 pause_button_enable                          false            #
