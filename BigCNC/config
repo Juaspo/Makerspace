@@ -193,8 +193,8 @@ return_error_on_unhandled_gcode              false            #
 
 #Extra
 on_boot_gcode								/sd/on_boot.gcode	#Gcode to run on boot
-on_boot_gcode_enable						true				#enable Gcod run on boot
-
+on_boot_gcode_enable						false				#enable Gcod run on boot
+grbl_mode                       true
 
 # network settings
 network.enable                               true             # enable the ethernet network services
