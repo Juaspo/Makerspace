@@ -197,9 +197,9 @@ on_boot_gcode_enable						false				#enable Gcod run on boot
 grbl_mode                       true
 
 # network settings
-network.enable                               true             # enable the ethernet network services
-network.webserver.enable                     true             # enable the webserver
-network.telnet.enable                        true             # enable the telnet server
+network.enable                               false             # enable the ethernet network services
+network.webserver.enable                     false             # enable the webserver
+network.telnet.enable                        false             # enable the telnet server
 network.plan9.enable                         true             # enable the plan9 network filesystem
 network.ip_address                           10.0.0.42     # the IP address
 network.ip_mask                              255.255.255.0    # the ip mask
