@@ -194,7 +194,8 @@ return_error_on_unhandled_gcode              false            #
 #Extra
 on_boot_gcode								/sd/on_boot.gcode	#Gcode to run on boot
 on_boot_gcode_enable						false				#enable Gcod run on boot
-grbl_mode                       true
+grbl_mode                       true      #Cnc mode true/false
+new_status_format               true      #Enable bcnc communication in smoothie mode
 
 # network settings
 network.enable                               false             # enable the ethernet network services
