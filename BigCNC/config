@@ -1,4 +1,4 @@
-# Use ANSI-encodin
+# Use ANSI encoding
 # Robot module configurations : general handling of movement G-codes and slicing into moves
 default_feed_rate                            4000             # Default rate ( mm/minute ) for G1/G2/G3 moves
 default_seek_rate                            4000             # Default rate ( mm/minute ) for G0 moves
@@ -14,7 +14,7 @@ gamma_steps_per_mm                           2560             # Steps per mm for
 planner_queue_size                           64               # Size of the planning queue, must be a power of 2. 128 seems to be the maximum.
 acceleration                                 750             # Acceleration in mm/second/second.(default 3000)
 acceleration_ticks_per_second                1000             # Number of times per second the speed is updated
-junction_deviation                           0.05             # Similar to the old "max_jerk", in millimeters, see : https://github.com/grbl/grbl/blob/master/planner.c#L409
+junction_deviation                           0.05             # Similar to the old "max_jerk", in millimeters, see : https://github.com/grbl/grbl/blob/master/planner.c#L409
                                                               # and https://github.com/grbl/grbl/wiki/Configuring-Grbl-v0.8 . Lower values mean being more careful, higher values means being faster and have more jerk
 
 # Stepper module configuration
@@ -105,6 +105,18 @@ switch.fan.output_pin                        2.6              #
 
 # Switch module for spindle control
 #switch.spindle.enable                        false            #
+spindle.enable                                   true   # set this to false to disable the spindle module
+spindle.type                                     modbus   # set the spindle type to modbus/RS485
+spindle.vfd_type                                 huanyang # set the VFD type, this is necessary because each inverter uses its own commands
+spindle.rx_pin                                   2.6      # TX pin for the soft serial
+spindle.tx_pin                                   2.4      # RX pin for the soft serial
+spindle.dir_pin                                  2.5      # RS485 is only half-duplex, so we need a pin to switch between sending and receiving 
+  # In order to get the Huanyang VFD accepting commands via ModBus, you need to change a few parameters:
+  # PD001: 2 (Source of run commands: communication port)
+  # PD002: 2 (Source of operating frequency: communication port)
+  # PD163: 1 (Communication address: 1)
+  # PD164: 1 (Communication Baud Rate: 9600)
+  # PD165: 3 (Communication Data Method: 8N1 RTU)
 
 # Endstops
 endstops_enable                              true            # the endstop module is enabled by default and can be disabled here
@@ -175,7 +187,7 @@ panel.gamma_jog_feedrate                     200               # z jogging feedr
 
 panel.hotend_temperature                     185               # temp to set hotend when preheat is selected
 panel.bed_temperature                        60                # temp to set bed when preheat is selected
-
+# Use ANSI-encodin
 # Example of a custom menu entry, which will show up in the Custom entry. 
 # NOTE _ gets converted to space in the menu and commands, | is used to separate multiple commands
 custom_menu.power_on.enable                true              #
@@ -195,8 +207,8 @@ return_error_on_unhandled_gcode              false            #
 #Extra
 on_boot_gcode								/sd/on_boot.gcode	#Gcode to run on boot
 on_boot_gcode_enable						false				#enable Gcod run on boot
-grbl_mode                       true      #Cnc mode true/false
-new_status_format               true      #Enable bcnc communication in smoothie mode
+grbl_mode                       			true      #Cnc mode true/false
+new_status_format               			true      #Enable bcnc communication in smoothie mode
 
 # network settings
 network.enable                               false             # enable the ethernet network services
