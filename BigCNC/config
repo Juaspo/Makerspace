@@ -6,6 +6,7 @@ mm_per_arc_segment                           0.5              # Arcs are cut int
 mm_per_line_segment                          5                # Lines can be cut into segments ( not usefull with cartesian coordinates robots ).
 
 # Arm solution configuration : Cartesian robot. Translates mm positions into stepper positions
+
 # Calibration info!
 # number of teeth of drive pulley 15
 # belt pitch 3mm
