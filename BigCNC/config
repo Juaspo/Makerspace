@@ -6,8 +6,15 @@ mm_per_arc_segment                           0.5              # Arcs are cut int
 mm_per_line_segment                          5                # Lines can be cut into segments ( not usefull with cartesian coordinates robots ).
 
 # Arm solution configuration : Cartesian robot. Translates mm positions into stepper positions
-alpha_steps_per_mm                           106.67           # Steps per mm for alpha stepper
-beta_steps_per_mm                            106.67           # Steps per mm for beta stepper
+# Calibration info!
+# number of teeth of drive pulley 15
+# belt pitch 3mm
+# motor 0.9 degrees per step
+# https://www.prusaprinters.org/calculator/
+
+alpha_steps_per_mm                           142.22           # Steps per mm for alpha stepper # Old value 106.67
+beta_steps_per_mm                            142.22           # Steps per mm for beta stepper  # Old value 106.67
+
 gamma_steps_per_mm                           2560             # Steps per mm for gamma stepper
 
 # Planner module configuration : Look-ahead and acceleration configuration
