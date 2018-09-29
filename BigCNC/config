@@ -13,8 +13,8 @@ mm_per_line_segment                          5                # Lines can be cut
 # motor 0.9 degrees per step
 # https://www.prusaprinters.org/calculator/
 
-alpha_steps_per_mm                           142.21           # Steps per mm for alpha stepper #142.22 with offset # Old value 106.67
-beta_steps_per_mm                            142.21           # Steps per mm for beta stepper  # Old value 106.67
+alpha_steps_per_mm                           142.1           # Steps per mm for alpha stepper #142.22 with offset # Old value 106.67
+beta_steps_per_mm                            142.1           # Steps per mm for beta stepper  # Old value 106.67
 
 gamma_steps_per_mm                           2560             # Steps per mm for gamma stepper
 
