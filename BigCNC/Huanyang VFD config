@@ -1,0 +1,6 @@
+PD001: 2 (Source of run commands: communication port)
+PD002: 2 (Source of operating frequency: communication port)
+PD163: 1 (Communication address: 1)
+PD164: 1 (Communication Baud Rate: 9600)
+PD165: 3 (Communication Data Method: 8N1 RTU)
+
